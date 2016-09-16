@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="calculadora">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="js/angular.js"></script>
+<script src="js/calculadora_controller.js"></script>
+
+</head>
+<body>
+
+<div ng-controller="CalculadoraController">
+
+Numero 1:<input ng-change="operacionFuncion()" type="number" ng-model="num1">
+Numero 2:<input ng-change="operacionFuncion()" type="number" ng-model="num2">
+<select ng-model="operacion"  ng-change="operacionFuncion()">
+
+	<option value="Sumar">Sumar</option>
+	<option value="Restar">Restar</option>
+	<option value="Multiplicar">Multiplicar</option>
+	<option value="Dividir">Dividir</option>
+
+</select>
+Resultado: <b>{{resultado}}</b>
+
+</div>
+
+</body>
+</html>

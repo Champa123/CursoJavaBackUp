@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Concesionaria</title>
+<script src="js/jquery-3.1.0.js" type="text/javascript"></script>
+<script>
+
+$(document).ready(function(){
+	
+	$("#nuevoSi").click( function(){
+		   if( $(this).is(':checked') ){
+			   $("#Viejo").hide();
+				$('#Nuevo').show();
+		   }
+		});
+	$("#nuevoNo").click( function(){
+		   if( $(this).is(':checked') ){
+			   $("#Nuevo").hide();
+				$('#Viejo').show();
+		   }
+		});
+	$("#marca").change(function(){
+		
+		if($(this).val()=="VW"){
+			$("#VW").show();
+			$("#Ford").hide();
+			$("#Fiat").hide();
+		}
+		else{
+		if($(this).val()=="Ford"){
+			$("#VW").hide();
+			$("#Ford").show();
+			$("#Fiat").hide();
+		}
+		else{
+		if($(this).val()=="Fiat"){
+			$("#VW").hide();
+			$("#Ford").hide();
+			$("#Fiat").show();
+		}}
+	}})		
+});
+</script>
+</head>  
+<body>
+<a href="./Respuestos.html"><button>Ir a Respuestos</button></a>
+<form>
+<input type="text" placeholder="Ingrese Nombre">
+<input type="text" placeholder="Ingrese DNI"><br>
+<input type="text" placeholder="Ingrese Apellido">
+<input type="text" placeholder="Ingrese Telefono"><br>
+<label>Opciones de poliza</label>
+Auto Nuevo:<input id="nuevoSi"  name="nuevo" type="radio">Si 
+<input id="nuevoNo"  name="nuevo" type="radio">No
+ </form>
+ <div hidden="true" id="Nuevo">
+ 	<textarea placeholder="Descripcion"></textarea>
+ 	<select id="marca">
+ 		<option> </option>
+ 		<option value="VW">Volkswagen</option>
+ 		<option value="Ford">Ford</option>
+ 		<option value="Fiat">Fiat</option>
+ 	</select>
+ <div hidden="true"	id="VW">
+ 	<select id="modelo">
+ 		<option>Gol</option>
+ 		<option>Golf</option>
+ 		<option>Polo</option>
+ 	</select>
+ </div>
+ <div hidden="true"	id="Ford">
+ 	<select id="modelo">
+ 		<option>Focus</option>
+ 		<option>Fiesta</option>
+ 		<option>Ka</option>
+ 	</select>
+ </div>
+ <div hidden="true"	id="Fiat">
+ 	<select id="modelo">
+ 		<option>Uno</option>
+ 		<option>Punto</option>
+ 		<option>Siena</option>
+ 	</select>
+ </div>
+ 	
+ 
+ 
+ 
+ </div> 
+ <div hidden="true" id="Viejo">
+ 	Modelo:<input type="text" placeholder="Ingrese Modelo">
+ 	Marca:<input type="text" placeholder="Ingrese Marca">
+ 	Patente:<input type="text" placeholder="Ingrese Patente"><br>
+ 	Asegurar contra:
+ 	<input type="checkbox"> Granizo
+ 	<input type="checkbox"> Todo Riesgo
+ 	<input type="checkbox"> Choques
+ 
+ 
+ 
+ </div> 
+</body>
+</html>

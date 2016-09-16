@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="js/jquery-3.1.0.js" type="text/javascript"></script>
+<script>
+	$(document).ready(function(){
+		$(".producto").click(function(){
+			if($(this).is(":checked")){
+				$("#cantidad").show();
+			}
+			else{
+				if(!($(this).is(":checked"))){
+					$("#cantidad").hide();
+					}	
+				}
+			})
+			$(".cantidad").click(function(){
+			if($(this).is(":checked")){
+				$("#factura").show();
+				$("#cantidad").hide();
+				$("#producto").hide();
+				$("#tabla").hide();
+				var producto = $(this).val();
+				document.getElementById("factura").innerHtml= producto;
+			}})
+			
+		}
+	)
+	 
+
+
+</script>
+</head>
+<body>
+<div>
+	<table id="tabla">
+		<tr>
+		<th>Precios de Productos
+		</tr>
+		<tr>
+			<th> Precio</th>
+			<th> Producto</th>
+		</tr>
+		<tr>
+			<td>Optica</td>
+			<td>$1000</td>
+		</tr>
+		<tr>
+			<td>Parabrisas</td>
+			<td>$3000</td>
+		</tr>
+		<tr>
+			<td>Limpia Parabrisas</td>
+			<td>$150</td>
+		</tr>
+		<tr>
+			<td>Paragolpes</td>
+			<td>$2200</td>
+		</tr>
+	</table>
+</div>
+
+<div id="producto">
+<h4>Autopartes</h4>
+<input class="producto" value="Opticas" name="prod" type="radio">Opticas
+<input class="producto"  value="Parabrisas" name="prod" type="radio">Parabrisas
+<input class="producto" value="Limpia Parabrisas" name="prod" type="radio">Limpia Parabrisas
+<input class="producto" value="Paragolpes" name="prod" type="radio">Paragolpes
+
+</div>
+
+
+<div id="cantidad" hidden="true">
+<h4>Cantidad</h4>
+<input class="cantidad" type="radio">1
+<input class="cantidad" type="radio">2
+<input class="cantidad" type="radio">3
+<input class="cantidad" type="radio">4
+</div>
+
+<div id="factura">
+
+
+</div>
+</body>
+</html>

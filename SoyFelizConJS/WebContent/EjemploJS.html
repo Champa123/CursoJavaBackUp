@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body>
+HOLA!
+<div id="miDiv"></div>
+Numero: <input type="number" id="campoNumero"><br>
+<input type="button" value="Saludar!!!" onclick="saludar()">
+
+
+
+
+
+<script type="text/javascript">
+		function saludar(){
+			var campoNumero = document.getElementById('campoNumero');
+			var nombre =  "<b>Juan</b>"+ campoNumero.value;
+			var miDiv= document.getElementById('miDiv')
+			miDiv.innerHTML = nombre;
+			console.log(nombre);
+	}
+	//saludar();
+</script>
+</body>
+</html>

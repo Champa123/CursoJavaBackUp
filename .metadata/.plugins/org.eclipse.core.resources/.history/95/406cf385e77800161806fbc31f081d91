@@ -1,0 +1,17 @@
+package edu.curso.java.dao;
+
+import java.util.List;
+
+import edu.curso.java.bo.Comentario;
+import edu.curso.java.bo.Proyecto;
+import edu.curso.java.bo.Usuario;
+import edu.curso.java.controllers.autocomplete.ItemAutoComplete;
+
+public interface ComentarioDAO {
+
+	public Long guardarComentario(Comentario comentario);
+	
+	public List<Comentario> listarComentarios();
+	
+	Proyecto recuperarComentarioPorId(Long id);
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+  	<script src="js/jquery-3.1.0.js"></script>
+  	<script src="js/handlebars-v4.0.5.js"></script>
+  	<script id="tr-template" type="text/x-handlebars-template">
+		<tr>
+			<td>{{producto}}</td>
+			<td>{{precio}}</td>
+			<td>{{cantidad}}</td>
+			<td>{{subtotal}}</td>
+			<td><input type="button" class="borrar" value="Borrar"></td>
+		</tr>
+	</script>
+  	<script>
+  		function recuperarDatos() {
+  			var campoProducto = $('#campoProducto').val();
+  			var campoPrecio = $('#campoPrecio').val();
+  			var campoCantidad = $('#campoCantidad').val();
+
+  			var p = {
+  					"producto" : campoProducto,
+  					"precio" : parseFloat(campoPrecio),
+  					"cantidad" : parseInt(campoCantidad),
+  					"subtotal" : 0
+  			};
+  			
+  			p.subtotal = p.precio * p.cantidad;
+  			
+  			return p;
+  		}
+  		
+  		function agregarItem(p) {
+  			var source   = $("#tr-template").html();
+  			var template = Handlebars.compile(source);
+  			$('#tabla-productos').append(template(p));
+  		}
+  	
+		$(function() {
+			$('#btnAgregar').click(function() {
+				var p = recuperarDatos();
+				agregarItem(p)
+			});
+		});
+  	</script>
+</head>
+<body>
+	Producto:<input type="text" id="campoProducto">
+	Precio:<input type="text" id="campoPrecio">
+	Cantidad:<input type="text" id="campoCantidad">
+	<input type="button" value="Agregar" id="btnAgregar">
+	<table id="tabla-productos">
+		<tr>
+			<th>Producto</th>
+			<th>Precio</th>
+			<th>Cantidad</th>
+			<th>Subtotal</th>
+			<th></th>
+		</tr>
+	</table>
+</body>
+</html>

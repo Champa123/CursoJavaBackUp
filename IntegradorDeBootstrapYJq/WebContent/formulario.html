@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>TP</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/General.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="Index.html"><img src="img/download.jpg" height="30" width="30"></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li ><a href="Index.html">Home</a></li>
+            <li class="active"><a href="formulario.html">Formulario</a></li>
+            <li><a href="listado.html">Listado</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+    <form>
+  <div style="padding-top:50px" class="form-group">
+    <label for="Nombre">Nombre</label>
+    <input type="text" class="form-control" id="Nombre" placeholder="Nombre">
+  <br>
+  </div>
+  <div class="form-group">
+    <label for="Apellido">Apellido</label>
+    <input type="text" class="form-control" id="Apellido" placeholder="Apellido">
+  <br>
+  </div>
+  <div class="form-group">
+    <label for="Direccion">Direccion</label>
+    <input type="text" class="form-control" id="Direccion" placeholder="Direccion">
+  <br>
+  </div>
+  <div class="radio">
+  <label for="inlineRadio1"><b>Sexo:</b></label>
+  <label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Masc
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Fem
+</label>
+<br>
+</div>
+<br>
+    <div class="checkbox">
+    <label for="inlineCheckbox1"><b>Gustos</b></label>
+    	<label class="checkbox-inline">
+  			<input type="checkbox" id="inlineCheckbox1" value="option1"> Papa
+		</label>
+		<label class="checkbox-inline">
+  			<input type="checkbox" id="inlineCheckbox2" value="option2"> Batata
+		</label>
+		<label class="checkbox-inline">
+			<input type="checkbox" id="inlineCheckbox3" value="option3"> Churrasco
+		</label>
+		<br>
+	</div>
+	<label >Notas:</label>
+	<textarea class="form-control" rows="3"></textarea>
+	<div style="padding-top: 30px" class="form-group">
+  <button id="Aceptar" type="submit" class="btn btn-default">Aceptar</button>
+  <button id="Cancelar" class="btn btn-default">Cancelar</button>
+	</div>
+</form>
+		
+		</div>
+		
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    
+</body>
+</html>

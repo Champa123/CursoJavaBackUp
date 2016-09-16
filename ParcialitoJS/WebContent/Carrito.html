@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="js/jquery-3.1.0.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(){
+	var lista='{"productos":['+'{"nombre":"papa" "precio":"10"},'+
+	               '{"nombre":"batata" "precio":"10"},'+
+	               '{"nombre":"zanahoria" "precio":"6"},'+
+	               '{"nombre":"tomate" "precio":"12"},'+
+	               '{"nombre":"lechuga" "precio":"4"}]}';
+	 productos=JSON.parse(lista);
+	
+	for ( var producto in productos) {
+		$("#listaProductos").innerHtml(productos.producto.nombre +" "+productos.producto.precio +"<br>")
+		
+	}
+})
+
+</script>
+</head>
+<body>
+<div id="listaProductos">
+</div>
+
+</body>
+</html>

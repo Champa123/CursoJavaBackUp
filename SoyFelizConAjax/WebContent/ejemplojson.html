@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+
+// 	VAR PERSONA = { "NOMBRE":"JUAN","EDAD":45, "SALUDAR": FUNCTION(TEXTO){
+// 		ALERT('HOLA A TODOS: '+ TEXTO)
+// 		}
+// 	};
+// 	ALERT(PERSONA.NOMBRE + " " + PERSONA.EDAD);
+// 	PERSONA.SALUDAR('FUNCA?');
+
+	var personas = [
+                { "nombre" : "Juan" , "edad" : 33},
+                { "nombre" : "Juan" , "edad" : 33},
+                { "nombre" : "Juan" , "edad" : 33},
+                { "nombre" : "Juan" , "edad" : 33},
+                { "nombre" : "Juan" , "edad" : 33}
+                ];
+  
+	for (var x = 0; x < personas.length; x++) {
+	var p = personas[x];
+	alert(p.nombre+" " + p.edad)
+	
+	function Persona (nombre,edad) {
+		this.nombre = nombre;
+		this.edad  = edad;
+		this.saludar = function() {
+			alert("Hola a todos:...");
+		};
+	}
+	
+	var p1 = new Persona("juan",45);
+	alert(p1.nombre);
+	p1.saludar();
+	
+}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
